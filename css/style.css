@@ -2,14 +2,16 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background-color: var(--yt-background-color-main);
 }
 
 :root {
   --yt-primary: #fff;
   --yt-secondary: #aaa;
-  --yt-third: a2a2a2;
-  --yt-background-color-main: #212020;
+  --yt-third: #a2a2a2;
+  --yt-icons: #313131;
+  --yt-search: #121212;
+  --yt-background-color-header: #202020;
+  --yt-background-color-main: #181818;
 }
 
 body {
@@ -17,47 +19,220 @@ body {
 }
 
 .header {
+  position: fixed;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  height: 56px;
+  /* padding: 10px; */
+  background-color: var(--yt-background-color-header);
   padding: 0px 16px;
+  z-index: 3;
 }
 
 .left-content {
-  width: 170px;
-  background-color: lightblue;
+  /* width: 170px; */
+  display: flex;
+  align-items: center;
+}
+
+.burger {
+  margin-top: 2px;
+  padding: 8px;
+  border: none;
+  background-color: transparent;
+}
+
+.burger-menu {
+  height: 24px;
+  background-color: transparent;
+}
+
+.youtube-logo {
+  text-decoration: none;
+  color: var(--yt-secondary);
+  font-size: 10px;
+  margin-top: 3px;
+  padding: 18px 14px 18px 16px;
+  position: relative;
+}
+
+.localitation-ar {
+  position: absolute;
+  top: 12px;
+  right: -2.3px;
+  letter-spacing: -0.1px;
 }
 
 .middle-content {
-  margin-left: 34px;
+  display: flex;
   flex: 1;
-  max-width: 524px;
-  background-color: lightcoral;
+  margin-left: 27px;
+  max-width: 728px;
+  height: 40px;
+  /* background-color: lightcoral; */
+}
+
+.search-box {
+  display: flex;
+  width: 638px;
+  padding: 0px 4px;
+  margin-left: 40px;
+}
+
+.box-input-search {
+  width: 539px;
+  height: 40px;
+  border: 1px solid var(--yt-icons);
+  margin-left: 17px;
+  padding: 2px 6px;
+  background-color: var(--yt-search);
 }
 
 .input-search {
-  border: 1px solid var(--yt-third);
-  padding: 2px 6px;
-  width: 524px;
+  width: 100%;
+  height: 100%;
+  border: none;
+  font-size: 16px;
+  color: var(--yt-icons);
+  background-color: var(--yt-search);
+}
+
+.input-search::placeholder { 
+      font-weight: 500;
+}
+
+.search-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  width: 63px;
+  height: 40px;
+  border: 1px solid var(--yt-icons);
+  background-color: var(--yt-icons);
+}
+
+.search {
+  margin-right: 1px;
+  width: 24px;
+}
+
+.btn-microphone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  border: none;
+  border-radius: 50%;
+  margin-left: -7px;
+  background-color: var(--yt-background-color-main);
+}
+
+.microphone {
+  width: 24px;
 }
 
 .right-content {
-  width: 200px;
-  background-color: lightpink;
+  width: 225px;
+  height: 40px;
+}
+
+.buttons-right {
+  margin-left: 5px;
+  display: flex;
+  justify-content: space-between;
+  width: 204px;
+}
+
+.box-recording,
+.box-app,
+.box-notifications {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin-right: 8px;
+}
+
+.icon-recording,
+.icon-app,
+.icon-notifications {
+  width: 24px;
+}
+
+.box-profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1px 6px;
+  width: 60px;
+  height: 40px;
+}
+
+.icon-profile {
+  width: 32px;
+  margin: 0px 8px;
+  border-radius: 50%;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar div {
+  position: fixed;
+  top: 50px;
+  width: 72px;
+  height: 100vh;
+  background-color: var(--yt-background-color-header);
+  z-index: 4;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 72px;
+  height: 74px;
+  border: none;
+  margin-top: 11px;
+  padding: 16px 0px;
+  background-color: transparent;
+}
+
+.icon-home {
+  width: 24px;
+  margin-bottom: 8px;
+}
+
+.icon-text {
+  color: var(--yt-primary);
+  font-size: 10px;
 }
 
 main {
-  width: 95vw;
+  width: 1832px;
   display: grid;
   grid-template-columns: 344px 344px 344px 344px 344px;
   column-gap: 16px;
   row-gap: 25px;
-  padding: 0 16px;
+  margin-top: 56px;
+  margin-left: 72px;
+  padding: 0px 16px;
+  padding-top: 18px;
+  background-color: var(--yt-background-color-main);
 }
 
 .video-preview {
   width: 100%;
   height: 300px;
+  margin-left: 16px;
 }
 
 .thumbnail {
@@ -70,6 +245,7 @@ main {
   right: 4px;
   padding: 3px 4px;
   color: white;
+  background-color: var(--yt-search);
   border-radius: 3px;
   font-size: 12px;
   font-weight: 500;
