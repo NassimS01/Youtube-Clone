@@ -8,11 +8,42 @@
 :root {
   --yt-primary: #fff;
   --yt-secondary: #aaa;
+  --yt-third: a2a2a2;
   --yt-background-color-main: #212020;
 }
 
 body {
   font-family: "Roboto", sans-serif;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0px 16px;
+}
+
+.left-content {
+  width: 170px;
+  background-color: lightblue;
+}
+
+.middle-content {
+  margin-left: 34px;
+  flex: 1;
+  max-width: 524px;
+  background-color: lightcoral;
+}
+
+.input-search {
+  border: 1px solid var(--yt-third);
+  padding: 2px 6px;
+  width: 524px;
+}
+
+.right-content {
+  width: 200px;
+  background-color: lightpink;
 }
 
 main {
@@ -30,18 +61,18 @@ main {
 }
 
 .thumbnail {
-      position: relative;
+  position: relative;
 }
 
-.time { 
-      position: absolute;
-      bottom: 7px;
-      right: 4px;
-      padding: 3px 4px;
-      color: white;
-      border-radius: 3px;
-      font-size: 12px;
-      font-weight: 500;
+.time {
+  position: absolute;
+  bottom: 7px;
+  right: 4px;
+  padding: 3px 4px;
+  color: white;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: 500;
 }
 
 .video-thumbnail {
@@ -70,7 +101,7 @@ main {
 }
 
 .channel-name {
-        font-size: 14px;
+  font-size: 14px;
   color: var(--yt-secondary);
 }
 
